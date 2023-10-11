@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const { errors } = require('celebrate');
-// const {
-//   userCreateValidation,
-//   loginValidation,
-// } = require('../middlewares/validation');
+const {
+  userCreateValidation,
+  loginValidation,
+} = require('../middlewares/validation');
 const {
   createUser,
   login,
@@ -14,12 +14,12 @@ const NotFoundError = require('../errors/not-found-err');
 
 router.post(
   '/signup',
-  // userCreateValidation,
+  userCreateValidation,
   createUser,
 );
 router.post(
   '/signin',
-  // loginValidation,
+  loginValidation,
   login,
 );
 

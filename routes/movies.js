@@ -1,8 +1,8 @@
 const router = require('express').Router();
-// const {
-//   movieCreateValidation,
-//   movieRemoveValidation,
-// } = require('../middlewares/validation');
+const {
+  movieCreateValidation,
+  movieRemoveValidation,
+} = require('../middlewares/validation');
 
 const {
   getAllMovies,
@@ -16,12 +16,12 @@ router.get(
 );
 router.post(
   '/',
-  // movieCreateValidation,
+  movieCreateValidation,
   createMovie,
 );
 router.delete(
   '/:movieId',
-  // movieRemoveValidation,
+  movieRemoveValidation,
   removeMovieById,
 );
 
