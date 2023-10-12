@@ -31,8 +31,14 @@ router.post(
   logout,
 );
 
-router.use('/movies', require('./movies'));
-router.use('/users', require('./users'));
+router.use(
+  '/movies',
+  require('./movies'),
+);
+router.use(
+  '/users',
+  require('./users'),
+);
 
 router.all('*', (req, res, next) => {
   next(new NotFoundError('Некорректный путь'));

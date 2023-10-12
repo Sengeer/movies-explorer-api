@@ -5,6 +5,7 @@ const cors = require('cors');
 const { requestLogger } = require('./middlewares/logger');
 require('dotenv').config();
 const errorer = require('./middlewares/errorer');
+const helmet = require('helmet');
 
 const {
   PORT = 3000,
@@ -27,6 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(requestLogger);
+app.use(helmet());
 
 app.use('/', require('./routes/index'));
 
