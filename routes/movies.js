@@ -5,14 +5,14 @@ const {
 } = require('../middlewares/validation');
 
 const {
-  getAllMovies,
+  getAllUserMovies,
   createMovie,
   removeMovieById,
 } = require('../controllers/movies');
 
 router.get(
   '/',
-  getAllMovies,
+  getAllUserMovies,
 );
 router.post(
   '/',
