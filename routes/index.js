@@ -8,6 +8,7 @@ const {
   createUser,
   login,
 } = require('../controllers/users');
+const logout = require('../middlewares/logout');
 const auth = require('../middlewares/auth');
 const { errorLogger } = require('../middlewares/logger');
 const NotFoundError = require('../errors/not-found-err');
@@ -24,6 +25,11 @@ router.post(
 );
 
 router.use(auth);
+
+router.post(
+  '/signout',
+  logout,
+);
 
 router.use('/movies', require('./movies'));
 router.use('/users', require('./users'));

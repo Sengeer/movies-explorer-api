@@ -9,7 +9,7 @@
   },
   "overrides": [
     {
-      "files": ["errorer.js"],
+      "files": ["errorer.js", "logout.js"],
       "rules": {
         "no-unused-vars": "off"
       }
