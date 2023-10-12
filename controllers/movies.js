@@ -32,7 +32,7 @@ module.exports.removeMovieById = (req, res, next) => {
         throw new ForbiddenError('Данный фильм отсутствует в вашем профиле');
       }
       return movie.deleteOne()
-        .then((deletedСard) => res.send({ data: deletedСard }))
+        .then((deletedMovie) => res.send({ data: deletedMovie }))
         .catch(next);
     })
     .catch((err) => {
