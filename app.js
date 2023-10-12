@@ -2,10 +2,10 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const helmet = require('helmet');
 const { requestLogger } = require('./middlewares/logger');
 require('dotenv').config();
 const errorer = require('./middlewares/errorer');
-const helmet = require('helmet');
 
 const {
   PORT = 3000,
