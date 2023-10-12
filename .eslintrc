@@ -5,7 +5,14 @@
       "error", {
         "allow": ["_id"]
       }
-    ],
-    "linebreak-style": "off"
-  }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["errorer.js"],
+      "rules": {
+        "no-unused-vars": "off"
+      }
+    }
+  ]
 }
