@@ -12,6 +12,7 @@ const logout = require('../middlewares/logout');
 const auth = require('../middlewares/auth');
 const { errorLogger } = require('../middlewares/logger');
 const NotFoundError = require('../errors/not-found-err');
+const { ERROR_MESSAGE } = require('../utils/constants');
 
 router.post(
   '/signup',
@@ -41,7 +42,7 @@ router.use(
 );
 
 router.all('*', (req, res, next) => {
-  next(new NotFoundError('Некорректный путь'));
+  next(new NotFoundError(ERROR_MESSAGE.COMMON.NOT_FOUND));
 });
 
 router.use(errorLogger);

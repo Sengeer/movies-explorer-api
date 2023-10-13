@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { ERROR_MESSAGE } = require('../utils/constants');
 
 const movieSchema = new mongoose.Schema({
   country: {
@@ -28,7 +29,7 @@ const movieSchema = new mongoose.Schema({
       validator(link) {
         return /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_+.~#?&/=]*)$/.test(link);
       },
-      message: 'Переданы некорректные данные',
+      message: ERROR_MESSAGE.COMMON.BAD_REQUEST,
     },
   },
   trailerLink: {
@@ -38,7 +39,7 @@ const movieSchema = new mongoose.Schema({
       validator(link) {
         return /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_+.~#?&/=]*)$/.test(link);
       },
-      message: 'Переданы некорректные данные',
+      message: ERROR_MESSAGE.COMMON.BAD_REQUEST,
     },
   },
   thumbnail: {
@@ -48,7 +49,7 @@ const movieSchema = new mongoose.Schema({
       validator(link) {
         return /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_+.~#?&/=]*)$/.test(link);
       },
-      message: 'Переданы некорректные данные',
+      message: ERROR_MESSAGE.COMMON.BAD_REQUEST,
     },
   },
   owner: {
