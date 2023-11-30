@@ -1,6 +1,9 @@
-# movies-explorer-api
-## Ссылки на проект
+<h1 align="center">Movies Explorer API</h1>
 
-IP 158.160.99.12
+Бэкенд часть сервиса поиска фильмов.
+## Технологический стек
 
-Backend https://api.movies.explorer.sengeer.nomoredomainsrocks.ru
+**Back-end:** Node.js, Express, API, Webpack
+
+<h4 ><a href="https://github.com/sengeer/movies-explorer-frontend" target="_blank">Основная информация о проекте</a></h4>
+
